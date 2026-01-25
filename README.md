@@ -3,7 +3,7 @@
 A responsive landing page for biology tutor website concept.
 
 ## Live Demo
-Coming soon
+https://makbridgecoder.github.io/biology-lessons-landing-page/
 
 ## Features
 - Responsive layout using Flexbox and media queries
