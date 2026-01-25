@@ -5,7 +5,6 @@ html {
   --light-brown-color: #A28B55;
   --main-text-color: rgb(152, 43, 28);
   --navbar-button-hover-color: rgb(152, 43, 28);
-  --column-container-XXL-color: #B5C18;
   --title-grad-color: #B5C18E;
   --title-card-color: #A67B5B;
   --dark-background-color: #000;
@@ -16,27 +15,31 @@ html {
   --nslet-btn-border: #674636;
   --nslet-btn-focus: #F2F1EB;
   --nslet-input-background: #F5F5F7;
-  --footer-background-one: #76453B;
   --footer-cnt-text-color: #DFD3C3;
+  --footer-background-one: #76453B;
   
  font-family: "Work sans", sans-serif;
+scroll-behavior: smooth;
+
 }
 
 * {
   box-sizing: border-box;
-  user-select: none;
 }
 
 body {
   background-color: var(--main-theme-color);
   margin: 0;
+  line-height: 1.5;
 
 }
 
 p {
   font-size: 1rem;
   font-weight: 600;
+  
 }
+
 
 header {
   margin-bottom: 20px;
@@ -59,7 +62,6 @@ header {
 }
 
 .column-container-XXL {
-  background-color: var(--column-container-XXL-color);
   width: 100%;
   max-width: 1372px;
   margin-left: auto;
@@ -117,7 +119,7 @@ header {
 .navbar-list-container li:hover  {
   background-color: var(--navbar-button-hover-color);
   border-radius: 24px;
-  transition: background-color 0 0.085s; 
+  transition: background-color 0.085s; 
   cursor: pointer;
 }
 
@@ -213,7 +215,6 @@ header {
 }
 
 .main-sect-right-cont {
-  border: 2px solid blues;
   margin-bottom: 50px;
 }
 
@@ -240,6 +241,15 @@ header {
   
 }
 
+
+.section_1-classes-button a:visited {
+  color: var(--dark-background-color);
+}
+
+.section_1-classes-button a:active {
+  color: white;
+}
+
 .section_2 .section-title {
   margin-bottom: 2rem;
 }
@@ -250,7 +260,6 @@ header {
 }
 
 .lesson-type {
-  background-color: lightsalmom;
   width: 90%;
   display: flex;
   flex-flow: row wrap;
@@ -342,7 +351,7 @@ header {
   content: "";
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: none;
+  background-color: transparent;
   background-image: url("https://i.ibb.co/r263kdw/pexels-rethaferguson-3059750.jpg");
   position: absolute;
   top: 0;
@@ -426,18 +435,29 @@ header {
   text-wrap: nowrap;
 }
 
-form label {
-  background-color: red;
-  display: none;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  
+
 }
 
-input[type=text] {
+input[type=text],
+input[type=email] {
   padding: 0.5rem 0.4rem 0.5rem 0.4rem;
   border: 1px solid var(--nslet-btn-border);
   min-width: 250px;
 }
 
-input[type=text]:focus {
+input[type=text]:focus, 
+input[type=email]:focus {
   background-color: var(--nslet-input-background);
   outline: outset;
   outline-width: thin;
