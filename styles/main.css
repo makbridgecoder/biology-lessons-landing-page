@@ -103,32 +103,33 @@ header {
 }
 
 
-.navbar-list-container li a {
+
+.navbar-list-container li a  {
   text-decoration: none;
   color: var(--main-text-color);
 }
 
-.navbar-list-container li {
+.navbar-list-container li span {
   padding: 10px 17px;
   font-size: .875rem; 
-  line-break: nowrap;
-  box-sizing: border-box;
   letter-spacing: 0.7px;
 }
 
 .navbar-list-container li:hover  {
   background-color: var(--navbar-button-hover-color);
   border-radius: 24px;
-  transition: background-color 0.085s; 
   cursor: pointer;
+  transition: background-color 0.085s;
+  transition: color 0.085s;
+  border: none;
 }
 
-.navbar-list-container li:hover a {
+.navbar-list-container li:hover a span {
   color: var(--main-theme-color); 
+  border: none;
 }
 
 .navbar-list-container li a:hover {
-  background-color: var(--navbar-button-hover-color);
   border-radius: 24px;  
 }
 
@@ -141,7 +142,11 @@ header {
 }
 
 
-.navbar-list a:visited, 
+.navbar-list a:visited {
+  text-decoration: none;
+}
+
+
 .footer-mail-link {
   text-decoration: none;
 }
@@ -255,7 +260,7 @@ header {
 }
 
 
-.main_section.section_3 {
+.main-section.section_3 {
   background-color: var(--light-brown-color);
 }
 
@@ -273,7 +278,7 @@ header {
 }
 
 .ls-card-img {
-  width: 246px;
+  max-width: 246px;
   height: 246px;
   object-fit: cover;
   border: 2px solid black;  
@@ -330,7 +335,7 @@ header {
 }
 
  .title-bar p {
-    word-spacing: 10px;
+    word-spacing: 5px;
     display: inline-block;
     font-weight: 300;
     font-size: .85rem;
@@ -453,7 +458,8 @@ input[type=text],
 input[type=email] {
   padding: 0.5rem 0.4rem 0.5rem 0.4rem;
   border: 1px solid var(--nslet-btn-border);
-  min-width: 250px;
+  width: 100%;
+  min-width: 0;
 }
 
 input[type=text]:focus, 
@@ -538,6 +544,15 @@ footer .row1 {
 
 .footer-list:hover {
   cursor: pointer; 
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: var(--main-theme-color);
+}
+.footer-list a:active {
+  text-decoration: none;
+  color: var(--dark-brown-background);
 }
 
 .footer-list li {
@@ -747,9 +762,15 @@ hr {
 @media (width >= 768px) {
 
   .navbar-list-container li {
-    font-size: 1rem; 
-    padding: 10px 25px;
+    padding: 10px 10px;
+
   }
+
+  .navbar-list-container li span {
+    font-size: 1rem; 
+  }
+
+  
 
   .column-container-XXL {
     padding-right: 2.75rem;
@@ -775,7 +796,7 @@ hr {
 
   
   .title-bar p {
-    word-spacing: 20px;
+    word-spacing: 15px;
     display: inline-block;
     font-weight: 400;
     font-size: 1rem;
