@@ -278,7 +278,7 @@ header {
 }
 
 .ls-card-img {
-  width: 246px;
+  max-width: 246px;
   height: 246px;
   object-fit: cover;
   border: 2px solid black;  
